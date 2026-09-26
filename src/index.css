@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-color: #080808;
+    --text-color: #F5F5F5;
+    --surface-color: #111111;
+    --border-color: #2A2A2A;
+    --accent-color: #FF6A00;
+  }
+
+  html.light {
+    --bg-color: #FFFFFF;
+    --text-color: #111111;
+    --surface-color: #FFFFFF;
+    --border-color: #E5E5E5;
+    --accent-color: #FF6A00;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Subtle architectural technical grid */
+.tech-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
+
+.light .tech-grid {
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+}
+
+/* Soft ambient orange glow */
+.ambient-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(255, 106, 0, 0.18) 0%, rgba(255, 106, 0, 0) 70%);
+}
+
+.card-glow-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-glow-hover:hover {
+  border-color: #FF6A00;
+  box-shadow: 0 0 30px -5px rgba(255, 106, 0, 0.18);
+  transform: translateY(-2px);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 2px;
+}
+
+.light ::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background: #E5E5E5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6A00;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   Global Consistent Light Mode System (#FFFFFF / #111111 / #6B6B6B / #E5E5E5 / #FF6A00)
+   ========================================================================== */
+html.light {
+  color-scheme: light;
+}
+
+html.light body,
+html.light .min-h-screen {
+  background-color: #FFFFFF !important;
+  color: #111111 !important;
+}
+
+/* Light Surface & Cards (#FFFFFF) */
+html.light .bg-\[\#101010\],
+html.light .bg-\[\#121212\],
+html.light .bg-\[\#131313\],
+html.light .bg-\[\#111111\],
+html.light .bg-\[\#141414\],
+html.light .bg-\[\#161616\],
+html.light .bg-\[\#0A0A0A\],
+html.light .bg-\[\#0C0C0C\],
+html.light .bg-\[\#0E0E0E\],
+html.light .bg-\[\#0E1114\],
+html.light .bg-\[\#101215\],
+html.light .bg-\[\#14181E\],
+html.light .bg-\[\#16181D\],
+html.light .bg-\[\#131110\],
+html.light .bg-\[\#181513\],
+html.light .bg-dark-surface,
+html.light .bg-dark-card {
+  background-color: #FFFFFF !important;
+  box-shadow: 0 2px 16px -2px rgba(0, 0, 0, 0.04);
+}
+
+html.light .bg-\[\#101010\]\/80,
+html.light .bg-\[\#111111\]\/70,
+html.light .bg-\[\#111111\]\/90,
+html.light .bg-\[\#111111\]\/95,
+html.light .bg-\[\#121212\]\/95,
+html.light .bg-\[\#14181E\]\/95,
+html.light .bg-\[\#16181D\]\/95,
+html.light .bg-\[\#181513\]\/95 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Secondary Surface & Elevated */
+html.light .bg-\[\#181818\],
+html.light .bg-\[\#1A1A1A\],
+html.light .bg-dark-elevated {
+  background-color: #F5F5F5 !important;
+}
+
+/* Light Borders (#E5E5E5) */
+html.light .border-white\/\[0\.08\],
+html.light .border-white\/\[0\.05\],
+html.light .border-white\/\[0\.1\],
+html.light .border-white\/10,
+html.light .border-white\/5,
+html.light .border-white\/20,
+html.light .border-\[\#2A2A2A\],
+html.light .border-dark-border {
+  border-color: #E5E5E5 !important;
+}
+
+html.light .divide-white\/\[0\.08\] > :not([hidden]) ~ :not([hidden]),
+html.light .divide-white\/10 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #E5E5E5 !important;
+}
+
+/* Primary Headings & Text (#111111) */
+html.light .text-\[\#F5F5F5\],
+html.light .text-dark-text,
+html.light h1:not(.bg-clip-text),
+html.light h2:not(.bg-clip-text),
+html.light h3:not(.bg-clip-text) {
+  color: #111111 !important;
+}
+
+/* Secondary & Muted Text (#6B6B6B) */
+html.light .text-\[\#A0A0A0\],
+html.light .text-\[\#A1A1A1\],
+html.light .text-\[\#888888\],
+html.light .text-\[\#6B6B6B\],
+html.light .text-\[\#666666\],
+html.light .text-\[\#555555\],
+html.light .text-dark-muted,
+html.light .text-dark-dim {
+  color: #6B6B6B !important;
+}
+
+/* Preserve text-white for buttons or badges with solid orange backgrounds */
+html.light .bg-\[\#FF6A00\],
+html.light .bg-\[\#FF6A00\] *,
+html.light .bg-accent,
+html.light .bg-accent *,
+html.light button.bg-\[\#FF6A00\],
+html.light button.bg-\[\#FF6A00\] * {
+  color: #FFFFFF !important;
+}
+
+/* Preserve Gradient Highlights */
+html.light .text-transparent {
+  color: transparent !important;
+}
+
+/* Light Theme Navigation & Header */
+html.light header {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-bottom-color: #E5E5E5 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Inputs & Form Elements */
+html.light input,
+html.light textarea {
+  background-color: #FFFFFF !important;
+  border-color: #E5E5E5 !important;
+  color: #111111 !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #6B6B6B !important;
+}
+
+/* Ambient glow in light mode */
+html.light .ambient-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(255, 106, 0, 0.08) 0%, rgba(255, 106, 0, 0) 70%);
+}
+
+html.light .card-glow-hover:hover {
+  border-color: #FF6A00;
+  box-shadow: 0 8px 24px -4px rgba(255, 106, 0, 0.15);
+}
