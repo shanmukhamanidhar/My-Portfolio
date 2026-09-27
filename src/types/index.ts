@@ -1,4 +1,4 @@
-export type ProjectStatus = 'Active Prototype' | 'Research & Implementation' | 'Functional Release' | 'In Progress';
+export type ProjectStatus = 'Active Prototype' | 'Research & Implementation' | 'Functional Release' | 'In Progress' | 'Currently Developing';
 
 export interface ArchitectureStep {
   step: string;

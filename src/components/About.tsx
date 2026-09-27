@@ -9,8 +9,8 @@ export const About: React.FC = () => {
     },
     {
       label: "CURRENT FOCUS",
-      value: "Software Engineering · AI / ML · Web Development",
-      detail: "Problem Solving & Practical Implementations"
+      value: "Software Engineering · AI / ML · Cybersecurity",
+      detail: "Active Work: StudyBuddy & ScamShield"
     },
     {
       label: "TECHNOLOGIES",
@@ -51,10 +51,10 @@ export const About: React.FC = () => {
 
             <div className="space-y-5 text-base sm:text-lg text-[#A0A0A0] leading-relaxed font-normal">
               <p>
-                I am a Computer Science &amp; Engineering student interested in software engineering, AI/ML and building useful digital products. I enjoy taking an idea from concept to a working system and continuously improving how it works.
+                I am a Computer Science &amp; Engineering student interested in software engineering, AI/ML, and cybersecurity. I enjoy taking an idea from concept to a working system and continuously improving how it works.
               </p>
               <p className="text-sm sm:text-base text-[#888888] leading-relaxed">
-                I focus on writing clean, readable code, learning core computer science fundamentals, and building projects that tackle practical challenges—from student productivity tools to satellite data analysis.
+                Currently, I am actively developing two projects: <span className="text-[#F5F5F5] font-medium">StudyBuddy</span>, an AI-powered student productivity platform, and <span className="text-[#F5F5F5] font-medium">ScamShield</span>, a cybersecurity project helping users detect and guard against online scams.
               </p>
             </div>
 
@@ -72,7 +72,10 @@ export const About: React.FC = () => {
                     CURRENTLY BUILDING
                   </div>
                   <div className="text-sm font-bold text-[#F5F5F5] font-display">
-                    StudyBuddy
+                    StudyBuddy &amp; ScamShield
+                  </div>
+                  <div className="text-[10px] text-[#FF6A00]/90">
+                    In Active Development
                   </div>
                 </div>
 
@@ -93,7 +96,7 @@ export const About: React.FC = () => {
                     CURRENTLY EXPLORING
                   </div>
                   <div className="text-[11.5px] text-[#F5F5F5] leading-snug">
-                    Creative Technology<br />
+                    Cybersecurity · Scam Analysis<br />
                     System Design · Tools
                   </div>
                 </div>

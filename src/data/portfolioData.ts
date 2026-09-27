@@ -7,10 +7,10 @@ export const PERSONAL_INFO = {
   headlineGreeting: "I BUILD",
   headlineFirst: "DIGITAL",
   headlineLast: "SYSTEMS.",
-  supportingText: "Computer Science & Engineering student focused on building software, exploring AI, and turning ideas into useful digital products.",
+  supportingText: "Computer Science & Engineering student focused on building software, exploring AI and cybersecurity, and turning ideas into useful digital products.",
   aboutHeadingStart: "BUILDING WITH",
   aboutHeadingHighlight: "PURPOSE.",
-  aboutBio: "I am a Computer Science & Engineering student interested in software engineering, AI/ML and building useful digital products. I enjoy taking an idea from concept to a working system and continuously improving how it works.",
+  aboutBio: "I am a Computer Science & Engineering student interested in software engineering, AI/ML, and cybersecurity. I enjoy taking ideas from concept to working systems and am currently developing StudyBuddy (AI study platform) and ScamShield (cybersecurity protection tool).",
   email: "shanmukhamanidhar@gmail.com",
   githubUsername: "shanmukhamanidhar",
   githubUrl: "https://github.com/shanmukhamanidhar",
@@ -20,13 +20,13 @@ export const PERSONAL_INFO = {
   educationInstitution: "Siddhartha Academy of Higher Education",
   educationGraduation: "Expected graduation: 2029",
   educationPeriod: "Expected graduation: 2029",
-  currentFocus: ["Software Engineering", "AI / ML", "Web Development", "Problem Solving"],
+  currentFocus: ["Software Engineering", "AI / ML", "Cybersecurity", "Web Development"],
   coreTechnologies: ["Python", "C", "HTML / CSS", "JavaScript", "MongoDB"],
   languagesSpoken: ["English", "Telugu", "Hindi"],
   status: {
-    currentlyBuilding: "StudyBuddy",
-    currentlyLearning: ["Software Engineering", "AI / ML", "Web Development"],
-    currentlyExploring: ["Creative Technology", "System Design", "Developer Tools"]
+    currentlyBuilding: "StudyBuddy & ScamShield",
+    currentlyLearning: ["Software Engineering", "AI / ML", "Cybersecurity & Web Dev"],
+    currentlyExploring: ["Scam Detection Systems", "Creative Technology", "System Design"]
   }
 };
 
@@ -57,32 +57,32 @@ export const PROJECTS: Project[] = [
   {
     id: "studybuddy",
     title: "StudyBuddy",
-    tagline: "Student Productivity & Revision Planner",
-    category: "Student Productivity / Web",
+    tagline: "AI-Powered Student Productivity & Study Platform",
+    category: "AI & Student Productivity / Web",
     featured: true,
-    status: "Functional Release",
-    technologies: ["HTML5", "CSS3", "JavaScript", "MongoDB"],
+    status: "Currently Developing",
+    technologies: ["HTML5", "CSS3", "JavaScript", "MongoDB", "AI Tools"],
     problem: "Students frequently struggle to organize coursework across multiple subjects, maintain consistent revision schedules, and track study progress effectively.",
-    solution: "A focused web application helping students organize academic workload, track revision cycles, and stay productive with structured task scheduling and MongoDB persistence.",
-    myContribution: "Designed the responsive user interface using semantic HTML and clean CSS, built client-side task tracking and revision scheduling logic, and connected the persistence layer using MongoDB.",
+    solution: "An AI-powered academic study and productivity platform in active development, helping students organize coursework, access useful academic tools, and streamline revision cycles.",
+    myContribution: "Actively developing and enhancing the platform—improving UI/UX, responsiveness, core features, authentication flows, deployment, and GitHub integration.",
     keyFeatures: [
       "Subject-based task and revision scheduling interface",
-      "MongoDB document storage for structured study sessions and task state",
+      "Academic study tools and structured student workload organization",
       "Dynamic deadline prioritization and revision reminders",
-      "Fast, lightweight semantic interface with zero bloated dependencies",
-      "Interactive progress tracking for daily and weekly study targets"
+      "Fast, responsive interface optimized for mobile and desktop devices",
+      "MongoDB document storage with ongoing auth, deployment, and GitHub integration"
     ],
     githubUrl: "https://github.com/shanmukhamanidhar/studybuddy",
     specSheet: {
       runtime: "Node.js / Express / Browser",
-      throughput: "Fast responsive query execution",
+      throughput: "Active Dev / Responsive Execution",
       coreParadigm: "Document-Oriented Task Architecture",
       persistence: "MongoDB Atlas Document Store"
     },
     caseStudy: {
-      overview: "StudyBuddy was engineered to address a personal and collegiate challenge: managing computer science coursework across multiple subjects without missing deadlines or skipping essential revision sessions.",
+      overview: "StudyBuddy is an AI-powered student productivity and study platform currently under active development. Engineered to help students organize academic coursework, access useful study tools, and maintain consistent revision routines.",
       problem: "Most task managers treat all tasks identically—as flat checkboxes. However, academic study requires differentiated scheduling: practical assignments demand immediate practice, while conceptual systems require repeated review over days.",
-      approach: "Designed a clean, document-oriented data model in MongoDB where study units encapsulate task hierarchies, difficulty levels, and target review dates. Engineered a clean frontend using modern semantic HTML5 and resilient CSS architecture, ensuring fast load times and clean accessibility across mobile and desktop.",
+      approach: "Designed a clean, document-oriented data model in MongoDB where study units encapsulate task hierarchies, difficulty levels, and target review dates. Engineered a clean frontend using modern semantic HTML5 and resilient CSS architecture, currently focusing on feature expansion, authentication, and deployment.",
       architecture: {
         description: "A clean client-server architecture linking a semantic frontend to a document database via RESTful contracts.",
         flowSteps: [
@@ -143,10 +143,11 @@ const calculateWeeklyVelocity = async (userId, db) => {
           solution: "Designed an asymmetrical CSS Grid system with CSS clamp() typography, eliminating layout thrashing and viewport overflow."
         }
       ],
-      outcome: "Delivered a reliable, working academic productivity tool with fast database retrieval and clean interface design.",
+      outcome: "Currently in active development: foundational core is running, with ongoing work on UI/UX polish, authentication, deployment, and academic tool integrations.",
       futureImprovements: [
-        "Implement calendar export (.ics format) for mobile calendar integration",
-        "Add an offline-first local storage caching layer for low-connectivity environments"
+        "Complete user authentication and personalized cloud profiles",
+        "Continuous automated deployment and GitHub CI/CD pipeline",
+        "Expand AI-assisted academic tools and revision cadence optimizations"
       ]
     }
   },
@@ -527,8 +528,8 @@ export const ACHIEVEMENTS: Achievement[] = [
 
 export const GITHUB_REPOSITORIES: GitHubRepo[] = [
   {
-    name: "StudyBuddy (Student-Study-Planner)",
-    description: "Full-stack academic study and revision planner with MongoDB document persistence and semantic HTML/CSS.",
+    name: "StudyBuddy",
+    description: "AI-powered student productivity and study platform in active development with MongoDB persistence and modern responsive UI.",
     language: "JavaScript / HTML",
     url: "https://github.com/shanmukhamanidhar/studybuddy",
     isFlagship: true
