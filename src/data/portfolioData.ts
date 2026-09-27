@@ -72,7 +72,7 @@ export const PROJECTS: Project[] = [
       "Fast, lightweight semantic interface with zero bloated dependencies",
       "Interactive progress tracking for daily and weekly study targets"
     ],
-    githubUrl: "https://github.com/shanmukhamanidhar/Student-Study-Planner",
+    githubUrl: "https://github.com/shanmukhamanidhar/studybuddy",
     specSheet: {
       runtime: "Node.js / Express / Browser",
       throughput: "Fast responsive query execution",
@@ -530,7 +530,7 @@ export const GITHUB_REPOSITORIES: GitHubRepo[] = [
     name: "StudyBuddy (Student-Study-Planner)",
     description: "Full-stack academic study and revision planner with MongoDB document persistence and semantic HTML/CSS.",
     language: "JavaScript / HTML",
-    url: "https://github.com/shanmukhamanidhar/Student-Study-Planner",
+    url: "https://github.com/shanmukhamanidhar/studybuddy",
     isFlagship: true
   },
   {
